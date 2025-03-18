@@ -1,37 +1,65 @@
 import { FileReader } from './file-reader.interface.js';
-import { readFileSync } from 'node:fs';
+import fs from 'node:fs';
+import readline from 'node:readline';
 import { Offer, OfferType } from '../../types/index.js';
 
 export class TSVFileReader implements FileReader {
-  private rawData = '';
+  private data: Offer[] = [];
+  private filePath: string;
 
-  constructor(
-    private readonly filename: string
-  ) {}
+  constructor(filePath: string) {
+    this.filePath = filePath;
+  }
 
-  public read(): void {
-    this.rawData = readFileSync(this.filename, { encoding: 'utf-8' });
+  public async read(): Promise<void> {
+    return new Promise((resolve, reject) => {
+      const stream = fs.createReadStream(this.filePath, { encoding: 'utf-8' });
+
+      const rl = readline.createInterface({
+        input: stream,
+        crlfDelay: Infinity,
+      });
+
+      rl.on('line', (line) => {
+        if (!line.trim()) {
+          return;
+        }
+
+        const [
+          title, description, createdDate, image, type, price, categories,
+          firstname, lastname, email, avatarPath
+        ] = line.split('\t');
+
+        if (!title || !description || !createdDate || !type || !price || !email) {
+          console.warn(`⚠ Пропущена некорректная строка: ${line}`);
+          return;
+        }
+
+        this.data.push({
+          title,
+          description,
+          postDate: new Date(createdDate),
+          image,
+          type: OfferType[type as keyof typeof OfferType] ?? OfferType.Sell, // Безопасная типизация
+          categories: categories.split(';').map((name) => ({ name })),
+          price: Number.parseInt(price, 10),
+          user: { email, firstname, lastname, avatarPath },
+        });
+      });
+
+      rl.on('close', () => {
+        console.info(`✅ Файл успешно прочитан. Всего записей: ${this.data.length}`);
+        resolve();
+      });
+
+      stream.on('error', (err) => {
+        console.error(`❌ Ошибка чтения файла: ${err.message}`);
+        reject(err);
+      });
+    });
   }
 
   public toArray(): Offer[] {
-    if (!this.rawData) {
-      throw new Error('File was not read');
-    }
-
-    return this.rawData
-      .split('\n')
-      .filter((row) => row.trim().length > 0)
-      .map((line) => line.split('\t'))
-      .map(([title, description, createdDate, image, type, price, categories, firstname, lastname, email, avatarPath]) => ({
-        title,
-        description,
-        postDate: new Date(createdDate),
-        image,
-        type: OfferType[type as 'Buy' | 'Sell'],
-        categories: categories.split(';')
-          .map((name) => ({name})),
-        price: Number.parseInt(price, 10),
-        user: { email, firstname, lastname, avatarPath },
-      }));
+    return this.data;
   }
 }

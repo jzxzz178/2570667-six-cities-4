@@ -1,0 +1,168 @@
+[
+    {
+      "id": 1,
+      "title": "Modern Loft in Amsterdam",
+      "description": "Spacious loft in the heart of Amsterdam with a great view and premium amenities.",
+      "publicationDate": "2025-03-01T10:00:00.000Z",
+      "city": "Amsterdam",
+      "previewImage": "https://example.com/image1.jpg",
+      "images": [
+        "https://example.com/img1.jpg",
+        "https://example.com/img2.jpg",
+        "https://example.com/img3.jpg",
+        "https://example.com/img4.jpg",
+        "https://example.com/img5.jpg",
+        "https://example.com/img6.jpg"
+      ],
+      "premium": true,
+      "favorite": false,
+      "rating": 4.8,
+      "type": "apartment",
+      "rooms": 3,
+      "guests": 4,
+      "price": 250,
+      "amenities": ["WiFi", "Air conditioning", "Towels", "Washer"],
+      "author": {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "avatarUrl": "https://example.com/avatar1.jpg",
+        "type": "pro"
+      },
+      "comments": 0,
+      "latitude": 52.370216,
+      "longitude": 4.895168
+    },
+    {
+      "id": 2,
+      "title": "Cozy Studio in Paris",
+      "description": "Charming studio in a historic building in the center of Paris.",
+      "publicationDate": "2025-03-02T12:30:00.000Z",
+      "city": "Paris",
+      "previewImage": "https://example.com/image2.jpg",
+      "images": [
+        "https://example.com/img7.jpg",
+        "https://example.com/img8.jpg",
+        "https://example.com/img9.jpg",
+        "https://example.com/img10.jpg",
+        "https://example.com/img11.jpg",
+        "https://example.com/img12.jpg"
+      ],
+      "premium": false,
+      "favorite": true,
+      "rating": 4.5,
+      "type": "room",
+      "rooms": 1,
+      "guests": 2,
+      "price": 120,
+      "amenities": ["Breakfast", "Fridge", "Washer"],
+      "author": {
+        "name": "Alice Smith",
+        "email": "alice@example.com",
+        "avatarUrl": "https://example.com/avatar2.jpg",
+        "type": "regular"
+      },
+      "comments": 2,
+      "latitude": 48.85661,
+      "longitude": 2.351499
+    },
+    {
+      "id": 3,
+      "title": "Luxury House in Cologne",
+      "description": "A spacious house with a garden and a private pool in Cologne.",
+      "publicationDate": "2025-02-28T08:45:00.000Z",
+      "city": "Cologne",
+      "previewImage": "https://example.com/image3.jpg",
+      "images": [
+        "https://example.com/img13.jpg",
+        "https://example.com/img14.jpg",
+        "https://example.com/img15.jpg",
+        "https://example.com/img16.jpg",
+        "https://example.com/img17.jpg",
+        "https://example.com/img18.jpg"
+      ],
+      "premium": true,
+      "favorite": false,
+      "rating": 5.0,
+      "type": "house",
+      "rooms": 5,
+      "guests": 6,
+      "price": 500,
+      "amenities": ["WiFi", "Private Pool", "Washer", "Baby seat"],
+      "author": {
+        "name": "Robert Johnson",
+        "email": "robert@example.com",
+        "avatarUrl": "https://example.com/avatar3.jpg",
+        "type": "pro"
+      },
+      "comments": 1,
+      "latitude": 50.938361,
+      "longitude": 6.959974
+    },
+    {
+      "id": 4,
+      "title": "Business Hotel in Brussels",
+      "description": "Comfortable hotel room in Brussels for business travelers.",
+      "publicationDate": "2025-02-27T14:15:00.000Z",
+      "city": "Brussels",
+      "previewImage": "https://example.com/image4.jpg",
+      "images": [
+        "https://example.com/img19.jpg",
+        "https://example.com/img20.jpg",
+        "https://example.com/img21.jpg",
+        "https://example.com/img22.jpg",
+        "https://example.com/img23.jpg",
+        "https://example.com/img24.jpg"
+      ],
+      "premium": false,
+      "favorite": true,
+      "rating": 4.2,
+      "type": "hotel",
+      "rooms": 2,
+      "guests": 2,
+      "price": 180,
+      "amenities": ["WiFi", "Breakfast", "Laptop friendly workspace"],
+      "author": {
+        "name": "Michael Brown",
+        "email": "michael@example.com",
+        "avatarUrl": "https://example.com/avatar4.jpg",
+        "type": "regular"
+      },
+      "comments": 3,
+      "latitude": 50.846557,
+      "longitude": 4.351697
+    },
+    {
+      "id": 5,
+      "title": "Stylish Apartment in Hamburg",
+      "description": "A modern apartment in the center of Hamburg with great city views.",
+      "publicationDate": "2025-02-26T09:30:00.000Z",
+      "city": "Hamburg",
+      "previewImage": "https://example.com/image5.jpg",
+      "images": [
+        "https://example.com/img25.jpg",
+        "https://example.com/img26.jpg",
+        "https://example.com/img27.jpg",
+        "https://example.com/img28.jpg",
+        "https://example.com/img29.jpg",
+        "https://example.com/img30.jpg"
+      ],
+      "premium": true,
+      "favorite": false,
+      "rating": 4.9,
+      "type": "apartment",
+      "rooms": 4,
+      "guests": 5,
+      "price": 300,
+      "amenities": ["WiFi", "Air conditioning", "Fridge", "Towels"],
+      "author": {
+        "name": "Sophia Lee",
+        "email": "sophia@example.com",
+        "avatarUrl": "https://example.com/avatar5.jpg",
+        "type": "pro"
+      },
+      "comments": 2,
+      "latitude": 53.550341,
+      "longitude": 10.000654
+    }
+  ]
+  

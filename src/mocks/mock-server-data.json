@@ -1,4 +1,5 @@
-[
+{
+    "offers": [
     {
       "id": 1,
       "title": "Modern Loft in Amsterdam",
@@ -165,4 +166,5 @@
       "longitude": 10.000654
     }
   ]
+}
   

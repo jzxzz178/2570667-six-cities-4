@@ -15,7 +15,7 @@
     "compile": "tsc -p tsconfig.json",
     "clean": "rimraf dist",
     "ts": "ts-node",
-    "cli": "node /src/main.cli.ts --",
+    "cli": "node ./src/main.cli.ts --",
     "start:server": "json-server --watch src/mocks/mock-server-data.json --port 3000"
   },
   "devDependencies": {
@@ -27,6 +27,7 @@
     "json-server": "^1.0.0-beta.3",
     "rimraf": "5.0.1",
     "ts-node": "^10.9.1",
+    "tsx": "^4.19.3",
     "typescript": "^5.2.2"
   },
   "type": "module",

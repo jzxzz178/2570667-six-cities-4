@@ -16,15 +16,20 @@
     "clean": "rimraf dist",
     "ts": "ts-node",
     "cli": "node ./src/main.cli.ts --",
-    "start:server": "json-server --watch src/mocks/mock-server-data.json --port 3000"
+    "start:server": "json-server --watch src/mocks/mock-server-data.json --port 3000",
+    "start:logs": "node dist/main.js"
   },
   "devDependencies": {
+    "@types/convict": "^6.1.6",
+    "@types/convict-format-with-validator": "^6.0.5",
     "@types/node": "18.17.17",
     "@typescript-eslint/eslint-plugin": "6.7.0",
     "@typescript-eslint/parser": "6.7.0",
     "eslint": "^8.49.0",
     "eslint-config-htmlacademy": "9.1.1",
     "json-server": "^1.0.0-beta.3",
+    "pino": "^9.6.0",
+    "pino-pretty": "^13.0.0",
     "rimraf": "5.0.1",
     "ts-node": "^10.9.1",
     "tsx": "^4.19.3",
@@ -37,6 +42,12 @@
   },
   "dependencies": {
     "axios": "^1.8.3",
-    "chalk": "^5.4.1"
+    "chalk": "^5.4.1",
+    "convict": "^6.2.4",
+    "convict-format-with-validator": "^6.2.0",
+    "dotenv": "^16.4.7",
+    "inversify": "^7.2.0",
+    "reflect-metadata": "^0.2.2",
+    "tslib": "^2.8.1"
   }
 }

@@ -1,10 +1,10 @@
 import 'reflect-metadata';
 import { Container } from 'inversify';
-import { Application } from './app/application.js';
+import { RestApplication } from './rest/rest.application.js';
 
 
 const container = new Container();
 
-container.bind<Application>(Application).toSelf();
+container.bind<RestApplication>(RestApplication).toSelf();
 
 export { container };
